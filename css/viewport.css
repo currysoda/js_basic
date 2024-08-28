@@ -1,0 +1,171 @@
+/* 미디어 쿼리 예시
+ * print는 화면 출력이 아니라 인쇄 프린터 출력시 예시임
+ * only 키워드 : 오직 인쇄할때만 적용
+ */
+/* @media only print {
+    body {
+        font-size: 12pt;
+    }
+
+    .header {
+        display: none;
+        /* 프린트 시 헤더 숨김 */
+
+
+/* 너비가 최소 1440px인 화면용 스타일 
+ * 웹 문서의 가로 너비와 세로 높이 width height min-width min-height max-width max-height
+ */
+/* @media screen and (min-width: 1440px) {} */
+
+/* 스마트폰 류 예시 
+ * 단말기의 해상도와 실제 브라우저의 너비가 다름에 주의
+ * device-width device-height min-device-width min-device-height max-device-width max-device-height
+ * orientation : portrait 세로모드 orientation : landscape 가로 모드
+ */
+/* @media screen and (min-device-width: 375px) and (min-device-height: 812px) and (orientation : portrait) {} */
+
+
+body {
+    background-image: url(../images/1702481626.jpg);
+    background-size: cover;
+
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url(../images/1695276686.jpg);
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(../images/029160fbcf31d54dc85ba11ff5e8cb1e.png);
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        background-image: url(../images/1702481626.jpg);
+        background-size: cover;
+    }
+}
+
+/* 그리드 레이아웃 컨테이너
+ */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+    /* grid 의 시작과 끝 라인을 정함
+     * 1/4   시작/끝 로 표현 가능 
+     */
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-column: 1/4;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-row: 1/4;
+
+    /* grid-template-areas
+     * 템플릿 영역을 만들어서 배치
+     * 한줄은 " " 빈 영역은 .(점) 으로 표시
+     */
+    grid-template-areas:
+        "box1 box1 box1"
+        "box2 box3 box3"
+        "box2 .    box4"
+    ;
+}
+
+/* 그리드 아이템
+ */
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: red;
+}
+
+.two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    background-color: blue;
+}
+
+.three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    background-color: violet;
+}
+
+.four {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: purple;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 4;
+    background-color: peru;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 4;
+    background-color: black;
+}
+
+.seven {
+    grid-column: 4;
+    grid-row: 1;
+    background-color: wheat;
+}
+
+.eight {
+    grid-column: 4;
+    grid-row: 2;
+    background-color: salmon;
+}
+
+.wrapper_flex {
+    display: flex;
+    height: 1000px;
+    width: 500px;
+    border: 3px solid black;
+    flex-direction: row;
+    /* justify-content 컨텐츠 정렬 기준 설정
+     */
+    justify-content: space-around;
+    /* align-items 교차 축의 정렬 방법
+     */
+    align-items: stretch;
+}
+
+
+
+/* h1 {
+    font-size: 1vw;
+    text-align: center;
+}
+
+p {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vw;
+
+    background-color: blue;
+
+    text-align: center;
+} */

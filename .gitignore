@@ -1,0 +1,5 @@
+# gitignore
+
+# 이미지 폴더 제거
+images/
+

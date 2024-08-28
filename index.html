@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!--<meta> 태그의 content 속성은 name 속성이나 http-equiv 속성과 관련된 값(value)을 명시합니다.-->
+    <meta charset="UTF-8"> <!-- 문자 인코딩 방식 -->
+    <meta name="keywords" content="html의 구조"> <!-- 웹 문서의 키워드 -->
+    <meta name="description" content="html의 구조를 알아봅시다."> <!-- 웹 문서의 설명 -->
+    <meta name="author" content="너의 이름은"> <!-- 웹 문서의 소유자나 제작자 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta-viewport 사용자가 보는 영역 제어 
+        width=device-width : 기기화면에 맞게 웹 페이지 넓이 설정 
+        initial-scale=1.0 : 웹 페이지 처음로드 시 초기 확대/축소 레벨 설정 -->
+    <link rel="stylesheet" href="style.css"> <!-- 외부 파일로 CSS 적용 -->
+
+    <!-- <style> /* css 주석 */
+    /**
+    * html 문서 내부에 CSS 적용 하는 법
+    */
+        table, th, td { border: 1px solid black }
+    </style> -->
+
+
+    <title>HTML 기본 문서</title>
+</head>
+
+<body> <!-- 웹 브라우저에 표시되는 body 태그 -->
+    <div id="full">
+        <div id="left_block">
+            <!-- 다른 요소를 하나로 묶는데 자주 사용되는 블록(block) 태그
+        일종의 컨테이너로 많이 쓰인다. -->
+        </div>
+
+
+        <div id="main_blcok">
+
+            <h1>프런트엔드 웹 개발</h1> <!-- h1 ~ h6 제목 태그 align HTML5 부터 지원X CSS 사용 -->
+            <hr> <!--  --------수평가로선----------  -->
+            <p>HTML</p> <!-- <p>태그 한 문단을 정의할 때 사용  -->
+            <p>CSS</p>
+            <p class="note">자바스크립트</p>
+            <!-- class="___" 로 CSS Class selectors (CSS 클래스 선택자) 나 JS document.getElementsByClassName() 를 통해 요소에 접근 -->
+
+            <p> <strong>백엔드</strong>는 <em>spring</em>을 쓸 것 입니다.</p>
+            <!-- <em> <strong> 강조를 위해 사용 CSS사용시 더욱 풍부한 표현 가능 -->
+            <b></b>
+            <br>
+            &nbsp;
+            <ol type="1" start="1"> <!-- 순서가 있는 리스트 -->
+                <li>내용1</li>
+                <li>내용2</li>
+            </ol>
+
+            <ul> <!-- 순서가 없는 리스트 type 속성은 HTML5 부터 지원X CSS 사용 -->
+                <li>내용1</li>
+                <li>내용2</li>
+            </ul>
+
+            <table> <!-- 테이블 -->
+                <caption>표의 제목</caption>
+                <tr> <!-- <tr> 표의 열 구분 -->
+                    <th>1</th> <!-- <th> 각 열의 제목 -->
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+
+                <tr>
+                    <td>A</td> <!-- <td> 테이블의 하나의 셀 -->
+                    <td>B</td>
+                    <td colspan="2">C</td> <!-- colspan 열 합치기 -->
+
+                </tr>
+
+                <tr>
+                    <td rowspan="2">ㄱ</td> <!-- rowspan 행 합치기 -->
+                    <td>ㄴ</td>
+                    <td>ㄷ</td>
+                    <td>ㄹ</td>
+                </tr>
+
+                <tr>
+                    <td>하나</td>
+                    <td>둘</td>
+                    <td>셋</td>
+                </tr>
+            </table>
+
+            <img src="" alt="이미지 없음"> <!-- img 태그 src="이미지 주소" alt="이미지 안나올 시 대체 텍스트" -->
+            <br>
+            <audio src="" alt="오디오 없음" controls></audio> <!-- audio 태그 src="오디오 주소" controls 제어기 표시 -->
+            <br>
+            <video src="" alt="비디오 없음" controls></video> <!-- video 태그 src="비디오 주소" controls 제어기 표시 -->
+            <br>
+
+            <div> <!-- 다른 요소를 하나로 묶는데 자주 사용되는 블록(block) 태그
+                일종의 컨테이너로 많이 쓰인다. -->
+            </div>
+
+            <span> <!-- 텍스트의 특정 부분을 묶는데 자주 사용되는 인라인(inline) 태그-->
+
+            </span>
+            <br> <!-- 줄바꿈 태그-->
+
+            <!-- 사용자로부터 입력을 받기 위해 form 태그 사용 -->
+            <form id="student" action="URL" method="post" name="student_register">
+                <!--action : 폼 데이터를 서버로 보낼때 데이터가 도착할 URL 
+            method : HTTP 메소드 명시 주로 POST사용 
+            name : form의 이름 명시 -->
+
+                <!-- input : 사용자로부터 입력을 받음 type : 입력될 데이터 타입 name : 요소의 이름 명시 -->
+                <!-- label과 input을 연관시키는법 label 태그안에 input 넣기 혹은 label-for과 input-id을 같은 속성값 쓰기-->
+                <label for="name"> 이름 : <input type="text" name="st_name"></label><br>
+                <label for="number">학번 : <input type="text" name="st_id"></label><br>
+                <label for="major"></label>학과 : <input type="text" name="department" id="major"><br>
+
+                <!-- button 클릭할 수 있는 버튼 onclick 클릭시 이벤트-->
+                <!-- value : 요소의 초기값  -->
+                <label for="email"></label>email : <input type="email" name="email" id="email"><br>
+                <label for="phone"></label>phone : <input type="tel" name="phone" id="phone"><br>
+
+                <input type="button" onclick="submit()" value="제출하기"></button>
+            </form>
+
+            <!-- label for 속성과 form id 속성을 일치시키면 form 태그 밖에서도 같은 form 내에 들어간다. -->
+            <!-- label과 input을 연관시키는법 label 태그안에 input 넣기 혹은 label-for과 input-id을 같은 속성값 쓰기-->
+            <label for="hobby" form="student">취미 : </label><input id="hobby" type="text" name="st_hobby"><br><br><br>
+
+            <!-- oninput input태그안에 값이 변경될 때마다 이벤트 발생 -->
+            <form oninput="x.value=parseInt(a.value)" id="delivery" action="URL" method="post" name="delivery">
+                <!-- checkbox 체크박스태그 checked=true 초기값이 체크되어있음 checkbox는 여러개 선택이 가능하다. -->
+                <label for="vegetable1"> 배추 : <input type="checkbox" name="vegetable1" value="cabbage"
+                        checked="true"></label>
+                <br>
+                <label for="vegetable2"> 무 : <input type="checkbox" name="vegetable2" value="radish"></label> <br>
+                <label for="vegetable3"> 당근 : <input type="checkbox" name="vegetable3" value="carrot"></label>
+                <br><br><br>
+
+                <label for="ID"> ID : <input type="text" name="ID"></label> <br>
+                <!-- input type password인 경우 치는 내용이 보이지 않는다.-->
+                <label for="password"> password : <input type="password" name="password"></label> <br>
+
+                <!-- input type radio 인 경우 같은 그룹으로 묶인(같은 name 등) 선택지들 중 한개만 선택 가능-->
+                <label for="radio_yes"><input type="radio" name="gift" value="yes"> 포장 신청</label> <br>
+                <label for="radio_no"><input type="radio" name="gift" value="no"> 포장 신청 안함</label> <br>
+                <label for="radio_refund"><input type="radio" name="gift" value="refund"> 반품 신청</label> <br>
+
+                <!-- input type number 인 경우 숫자를 입력 min max 최대 최소 step 한번에 오르는 수-->
+                <label for="quantity"><input type="number" name="quantity" min="0" max="5" step="1"> 수량</label> <br>
+
+                <!-- input type range 인 경우 범위안에서 값 지정 min max 최대 최소 step 한번에 오르는 수-->
+                <label for="range"><input type="range" id="a" name="range" min="0" max="100" step="1"> 범위 </label><br>
+
+                <!-- output 계산에 의해 수행된 결과를 보여줌 name : output 자체의 요소의 이름  for : output과 연결할 input.id  id:output에서 표시할 요소의 이름-->
+                <!-- 6/5일 할 내용 name과 id의 차이 caniuse.com 부터 시작할 것-->
+                <label for="range_out"> 범위 output : <output name="range_out" id="x" for="a"></output></label> <br>
+
+                <br>
+                <hr><br>
+
+                <fieldset> <!-- form태그 내의 연관요소를 그룹으로 묶을 때 사용 -->
+                    <legend>날짜 시간 입력하기</legend> <!-- fieldset의 제목을 정하기 위해 사용 -->
+
+                    <!-- 날짜 입력 -->
+                    <h3>날짜 지정하기</h3>
+                    <input type="date" name="" id=""> <!-- 년도/몇 월/며칠 -->
+                    <input type="month" name="" id=""> <!-- 년도/몇 월 -->
+                    <input type="week" name="" id=""> <!-- 년도/몇 번째 주 월(시작) ~ 일(끝) -->
+
+                    <br><br>
+                    <h3>시간 지정하기</h3>
+                    <input type="time" name="" id=""> <!-- 오전/오후 시 분 -->
+                    <input type="datetime-local" name="my_time" id="my_time"> <!-- 년도/몇 월/며칠 시간(시 분) 표시 -->
+
+                    <br><br>
+                    <h3>범위 지정하기</h3>
+                    <input type="date" min="2020-01-01" max="2222-12-31" name="" id=""> <!-- 날짜 범위 제한 -->
+                    <input type="time" min="18:00" max="20:00" name="" id=""> <!-- 시간 범위 제한 -->
+
+                    <!-- 숨겨진 입력 필드 입력은 받아야 하지만 유저가 임의로 변경하면 안되는 값을 받을 때 사용 -->
+                    <input type="hidden" id="Token" name="Token" value="xmkf3j3jhkjh559u98ghs">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>기타 정보</legend>
+                    <label for="prod"> 주문 상품 <input type="date" name="prod" id="prod" value="오렌지 3kg"></label><br>
+                    <label for=""> 이름 <input type="text" name="" id="" required> </label><br>
+                    <label for=""> 배송 주소 <input type="text" name="" id=""> </label><br>
+                    <label for=""> 이메일 <input type="email" name="" id=""> </label><br> <!-- input type email-->
+
+                    <!-- textarea 여러줄의 텍스트를 입력하는 영역 정의 -->
+                    <label for=""> <textarea name="memo" id="memo_details" cols="40" rows="4"></textarea></label> <br>
+
+
+                    <label for>
+                        <select name="select_kilogram"> <!-- select는 사용자가 정해진 입력값을 고르는 것 -->
+                            <option value="special_3" selected>3kg</option>
+                            <option value="special_5">5kg</option>
+                            <option value="special_7">7kg</option>
+                            <option value="special_9">9kg</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>상품 선택</legend>
+                    <p><b>주문할 상품을 선택해주세요</b></p>
+                    <label for="goods"><input type="text" list="goods"></label>
+                    <datalist id="goods"> <!-- select는 사용자가 정해진 입력값을 고르는 것 -->
+                        <option value="special_3">3kg</option>
+                        <option value="special_5">5kg</option>
+                        <option value="special_7">7kg</option>
+                        <option value="special_9">9kg</option>
+                    </datalist>
+                </fieldset>
+
+                <input type="button" onclick="submit()" value="제출하기"></button>
+
+            </form>
+            <br><br><br><br><br>
+        </div>
+
+        <div id="right_block">
+
+        </div>
+    </div>
+</body>
+
+</html>

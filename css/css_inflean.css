@@ -1,0 +1,394 @@
+/* CSS 주석 */
+
+/* h1 {
+    color: blueviolet;
+    color: violet;
+    color: purple;
+    font-style: italic;
+} */
+
+/* * 전체 선택자 */
+* {
+    color: black;
+}
+
+/* 타입 선택자(태그) */
+h1 {
+    color: blue;
+
+}
+
+/* class 선택자 .className */
+.redtext {
+    color: red;
+}
+
+/* id 선택자 #idName */
+#violettext {
+    color: violet;
+}
+
+/* 그룹 선택자 Grouping selector */
+
+h3,
+h4 {
+    color: aqua;
+}
+
+/* 캐스캐이딩 우선순위 */
+.darkorangetext {
+    color: darkorange;
+}
+
+
+.textcolor1 {
+    color: deeppink;
+}
+
+p {
+    color: darkgreen;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 10cap;
+}
+
+.my_list {
+    list-style-type: square;
+}
+
+.box_border {
+    margin: 100px;
+    border: 10px solid;
+    border-color: black;
+    padding: 100px;
+    border-radius: 100%;
+}
+
+.inline_block {
+    width: 1200px;
+    height: 1200px;
+    background-color: black;
+    z-index: 0;
+}
+
+.block_header {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+    z-index: 1;
+}
+
+.block_left_sidebar {
+    width: 200px;
+    height: 800px;
+    background-color: aqua;
+    float: left;
+    z-index: 1;
+}
+
+.block_contents {
+    width: 800px;
+    height: 800px;
+    background-color: blueviolet;
+    float: left;
+    z-index: 1;
+}
+
+.block_right_sidebar {
+    width: 200px;
+    height: 800px;
+    background-color: blue;
+    float: right;
+    z-index: 1;
+}
+
+.block_footer {
+    width: 100%;
+    height: 200px;
+    background-color: darkgreen;
+    z-index: 1;
+}
+
+.box_position {
+    /* 요소의 위치를 결정하는 속성
+     * static : 요소의 일반적인 흐름에 따라 배치 default 값
+     * relative : 요소의 일반적인 흐름에 따라 배치 자기를 기준으로 top, bottom, right, left에 따라 offset 적용
+     * absolute : 가장 가까운 조상 요소에 상대적으로 배치
+     * fixed : 뷰포트의 초기 컨테이닝 블록을 기준으로 배치
+     * sticky : 가장 가까운 스크롤 가능한 조상에 상대적으로 배치 뷰포트에도 붙을 수 있다. 조상요소가 스크롤될경우 사라질 수 있다.
+     */
+
+    /* position: static; */
+    /* position: relative; */
+    position: absolute;
+    /* position: fixed;
+    position: sticky;  */
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    width: 1200px;
+    height: 400px;
+    background-color: lime;
+
+    z-index: 2;
+}
+
+.gradation {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    /* gradation 적용 linear-gradient(색1, 색2)
+     * (각도, 색1, 색2) 각도는 0도에서 아래 -> 위 진행 각도가 양수 시계방향 음수 반시계방향
+     */
+    background: linear-gradient(white 30%, skyblue 60%, purple);
+}
+
+.gradation2 {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    /* gradation 적용 radial-gradient 원형 그라데이션 */
+    background: radial-gradient(white 30%, skyblue 60%, purple);
+}
+
+.gradation3 {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    /* gradation 적용 radial-gradient 원형 그라데이션 
+     * circle at 50% 50% 중앙 100% 100% 오른쪽 맨 아래 0% 0% 왼쪽 맨 위
+     */
+    background: radial-gradient(circle at 30% 70%, black 30%, skyblue 60%, purple);
+}
+
+p {
+    color: black;
+}
+
+/* 후손(하위) 선택자(Descendant Combinator)
+ * .temp class 안에 하위요소 p 를 선택한다.
+ * 공백으로 구분한다.
+ */
+.temp p {
+    color: aquamarine;
+}
+
+/* 복합 선택자 (combinator selector)
+ * 공백없이 붙여서 쓴다. 모든 조건을 만족해야 적용된다.
+ */
+.condition1#condition2 {
+    color: brown;
+    font-style: italic;
+}
+
+/* 자식 선택자(Child Combinator)
+ * 부모 바로 밑에 있는 것만 적용 depth가 깊이 적용되려면 후손(하위) 선택자 사용
+ */
+.condition3>#condition4 {
+    color: fuchsia;
+    font-style: italic;
+}
+
+/* Adjacent Sibling Selector(인접 형제 선택자)
+ * A + B : A의 형제 요소 중 A 바로 뒤에 위치하는 B 요소를 선택. A와 B 사이에 다른 요소가 존재하면 선택되지 않는다.
+ */
+.condition5+#condition6 {
+    color: rgb(73, 154, 156);
+    font-style: italic;
+}
+
+/* General Sibling Selector(일반 형제 선택자)
+ * A ~ B : A의 형제 요소 중 A 뒤에 위치하는 B 요소를 모두 선택.
+ */
+.condition7~#condition8 {
+    color: rgb(35, 156, 95);
+    font-style: italic;
+}
+
+/* Pseudo-class 의사 클래스 가상 선택자 (특정 상태를 선택하기 위해)
+ * not 해당요소가 아닌것들 모두 선택
+ */
+h5:not(.notblue) {
+    background-color: blue;
+}
+
+/* :hover 마우스를 올려두면 적용
+ */
+a:hover {
+    background-color: aqua !important;
+}
+
+/* :focus focus(초점) 상태일때 적용  
+ */
+input:focus {
+    background-color: yellow;
+}
+
+/* :link 방문하지 않은 링크일때 적용
+ */
+a:link {
+    background-color: purple;
+}
+
+/* :visited 방문한 링크일때 적용
+ */
+a:visited {
+    background-color: aquamarine;
+}
+
+/* :active 클릭하는 동안 색이 변합니다.
+ */
+button:active {
+    background-color: red;
+}
+
+
+/* Pseudo-elements Selectors 가상 요소
+ * ::after 각 컨텐츠 뒤에 삽입
+ * 기타등등은 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+ */
+.brandnew::after {
+    content: "NEW!!";
+    font-size: x-small;
+    padding: 2px 4px;
+    margin: 0 10px;
+    border-radius: 4px;
+    background: red;
+    color: white;
+}
+
+/* transform 트랜스폼 : 특정 요소나 크기 형태 스타일이 바뀌는 것
+ */
+.transform:hover {
+    /* translate(x, y) : 지정한 크기 만큼 x y 축으로 이동하는 것 
+     * scale(sx, sy) : 지정한 크기만큼 x y 축으로 확대 축소
+     * rotate(각도) : 지정한 각도만큼 회전 양수 시계방향 음수 시계반대방향
+     * skew(ax, ay) : 지정한 각도만큼 왜곡
+     */
+
+    /* transform: translate(500px, -500px);
+    transform: scale(5, 5); */
+    /* transform: rotate(77deg); */
+    transform: skew(30deg, 70deg);
+}
+
+/* transition 트랜스폼 : 특정 요소나 크기 형태 스타일이 바뀌는 것
+ * 
+ */
+.transition {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+}
+
+.transition:hover {
+    background-color: skyblue;
+
+    border: 3px solid black;
+    border-radius: 100%;
+
+    transition: all linear 1.5s;
+}
+
+.transition2 {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+}
+
+.transition2:hover {
+    background-color: skyblue;
+
+    border: 3px solid black;
+    border-radius: 100%;
+
+    transition: all ease 1.5s;
+}
+
+.transition3 {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+}
+
+.transition3:hover {
+    background-color: skyblue;
+
+    border: 3px solid black;
+    border-radius: 100%;
+
+    width: 700px;
+    height: 700px;
+
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+
+    /* transform: rotate(270deg); */
+}
+
+/* animation 애니메이션 : 특정 요소나 크기 형태 스타일이 바뀌는 것
+ * animation-name: shape;
+ */
+.animation1 {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+
+    /* animation-name : 애니메이션 지정 이름
+     * animation-duration : 애니메이션 실행 시간
+     */
+    animation-name: shape;
+    animation-duration: 3s;
+}
+
+.animation1:hover {
+    background-color: darkorchid;
+    width: 700px;
+    height: 700px;
+    border: 3px solid black;
+
+    transform-origin: 50% 50%;
+
+    animation-name: rotate;
+    animation-duration: 6s linear;
+    animation-iteration-count: infinite;
+}
+
+/* shape 애니메이션 정의
+ */
+@keyframes shape {
+    from {
+        border: 1px solid transparent;
+    }
+
+    to {
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+}
+
+/* rotate 애니메이션 정의
+ */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

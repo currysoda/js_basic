@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>CSS 기본 문서</title>
+    <!-- CSS를 직접 html파일에 넣어도 되지만 파일 분리하는 것이 효율적이다. -->
+    <link rel="stylesheet" href="css/css_inflean.css">
+
+
+
+</head>
+
+<body>
+
+    <h2>h2 hello</h2>
+
+    <div id=" container">
+
+        <h1>h1 hello</h1>
+
+        <h1 class="redtext">h1 class="redtext" hello</h1>
+
+        <h1 id="violettext">h1 id="violettext" hello</h1>
+
+        <h3>h3 hello</h3>
+
+        <h4>h4 hello</h4>
+
+        <h3 class="darkorangetext">h3 class="darkorangetext" hello</h3>
+        <!-- class id 가 동시에 있을시 id 우선 -->
+        <h3 class="darkorangetext" id="violettext">h3 class="darkorangetext" id="violettext" hello</h3>
+
+        <p>hello</p>
+
+        <ul class="my_list">
+            <li>안녕하세요.</li>
+            <li>고맙습니다.</li>
+            <li>잘계세요.</li>
+        </ul>
+
+        <p class="box_border">hello</p>
+    </div>
+
+    <div class="inline_block">
+        <!--<header> 태그는 문서나 특정 섹션(section)의 헤더(header)를 정의할 때 사용합니다.-->
+        <header class="block_header">block_header</header>
+        <!-- <aside> 태그는 페이지의 다른 콘텐츠들과 약간의 연관성을 가지고 있지만, 
+            해당 콘텐츠들로부터 분리시킬 수 있는 콘텐츠로 구성된 페이지 영역을 정의할 때 사용합니다. -->
+        <aside class="block_left_sidebar">block_left_sidebar</aside>
+        <aside class="block_contents">block_contents</aside>
+        <aside class="block_right_sidebar">block_right_sidebar</aside>
+        <!--<footer> 태그는 문서나 특정 섹션(section)의 푸터(footer)를 정의할 때 사용합니다.-->
+        <footer class="block_footer">block_footer</footer>
+
+        <aside class="box_position">box_position</aside>
+    </div>
+
+    <br>
+
+    <div class="gradation">
+
+    </div>
+
+    <br>
+
+    <div class="gradation2">
+
+    </div>
+
+    <div class="gradation3">
+
+    </div>
+
+    <br><br>
+
+    <p>QWER</p> <br><br>
+
+    <div class="temp">
+        <p>
+            QWER
+        </p> <br><br>
+    </div>
+
+    <p id="condition2" class="condition1">복합 선택자 (combinator selector)</p><br><br>
+    <!-- child selector (>) -->
+    <div class="condition1">
+        <p id="condition2">QWER </p>
+    </div><br><br>
+
+    <div class="condition3">
+        <p id="condition4">QWER</p>
+        <p id="condition4">ㄹㅇㅋㅋ</p>
+        <div>
+            <!-- 자식 선택자는 부모 바로 밑에서만 적용 여기는 적용되지 않는다. -->
+            <p id="condition4">ㅁㄴㅇㄹ</p>
+        </div>
+    </div>
+
+    <div class="condition5">
+        <!-- 인접 형제는 바로 뒤에 오는 형제 것만 적용된다. -->
+        <h2 class="condition5">Adjacent Sibling Selector(인접 형제 선택자)</h2>
+        <p id="condition6">Adjacent Sibling Selector(인접 형제 선택자)</p>
+        <!-- 적용안됨 -->
+        <p id="condition6">Adjacent Sibling Selector(인접 형제 선택자)</p>
+        <div>
+            <!-- 적용안됨 -->
+            <p id="condition6">Adjacent Sibling Selector(인접 형제 선택자)</p>
+        </div>
+    </div><br><br>
+
+    <div class="condition7">
+        <h2 class="condition7">General Sibling Selector(일반 형제 선택자)</h2>
+        <!-- 일반 형제 선택자는 뒤에오는 모든것에 적용된다. -->
+        <p id="condition8">General Sibling Selector(일반 형제 선택자)</p>
+        <p id="condition8">General Sibling Selector(일반 형제 선택자)</p>
+        <div>
+            <!-- 여기는 자식, 후손의 영역(적용되지 않음) -->
+            <p id="condition8">General Sibling Selector(일반 형제 선택자)</p>
+        </div>
+    </div> <br><br>
+
+    <h5>가상 클래스 not</h5>
+
+    <h5 class="notblue">가상 클래스 not</h5> <br>
+
+    <a href="https://www.naver.com">이 링크를 가리켜보세요.</a> <br><br>
+
+    <input type="text" name="name"> <br><br>
+
+    <button>클릭하는동안 색이 변합니다.</button> <br><br>
+
+    <p class="brandnew">가상 요소 예제</p>
+
+    <button class="transform">마우스를 올리면 위치가 변합니다.</button>
+
+    <div class="transition">
+        <p>transition 애니메이션 예제1</p>
+    </div> <br>
+
+    <div class="transition2">
+        <p>transition 애니메이션 예제2</p>
+    </div> <br>
+
+    <div class="transition3">
+        <p>transition 애니메이션 예제3</p>
+    </div><br>
+
+    <div class="animation1">
+        <p>animation1 애니메이션 예제1</p>
+    </div>
+</body>
+
+</html>
