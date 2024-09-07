@@ -1,0 +1,33 @@
+<!--인라인 JS-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>inline JS</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h1 id="heading">내용 입력</h1>
+    <p id="text">위 내용을 입력해보세요</p>
+
+    <script>
+        let heading = document.querySelector('#heading');
+
+        heading.addEventListener('click', () => {
+            if (heading.style.color === "red") {
+                heading.style.color = "cyan";
+            } else {
+                heading.style.color = "red";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
