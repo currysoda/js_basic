@@ -125,7 +125,7 @@ let user4 = {
     "user4Name": "John", // 키 : name , 값 : "John"
     "user4Age": 30,      // 키 : age ,  값 : 30	
     "likes birds": true, // , (쉼표) 로 끝낼 수 있습니다. 
-}
+};
 
 // 묶은 프로퍼티를 접근할 때 대괄호를 사용합니다.
 
@@ -135,7 +135,17 @@ console.log(user4["likes birds"]); // true
 
 console.log(user4["user4Age"]); // 30
 
-console.log(user4.age); // 에러 발생
+console.log(user4.user4Age); // 이런 방법으로도 가능
+
+let key = "user4Age";
+
+console.log(user4[key]); // 변수를 선언해서 접근도 가능 / 대괄호 안의 변수는 런타임에 정해진다.
+
+console.log(user4.key); // undefined 변수 사용시 점 표기법(dot notation)은 불가능하다
 
 
+const user5 = {
+
+
+};
 
