@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 alert("Hello");
 
@@ -103,36 +103,69 @@ console.log(2 + 2 + "2") // 42
 
 let num4 = 1;
 
-console.log(num4);
-console.log(typeof num4);
+console.log(num4); // 1
+console.log(typeof num4); // number
 
 num4 = +num4;
 
-console.log(num4);
-console.log(typeof num4);
+console.log(num4); // 1
+console.log(typeof num4); // number
 
 let str2 = "1";
 
-console.log(str2);
-console.log(typeof str2);
+console.log(str2); // 1
+console.log(typeof str2); // string
 
 str2 = +str2;
 
-console.log(str2);
-console.log(typeof str2);
+console.log(str2); // 1
+console.log(typeof str2); // number
+
 
 // 할당 연산자
 
 let num5 = 10 + 5 + 7;
 
-console.log(num5);
+console.log(num5); // 22
 
 
+// 비트 연산자
+let num6 = 2;
+
+// 비트 and
+console.log(num6 & 5); // 0
+// 비트 or 
+console.log(num6 | 5); // 7
+// 비트 xor
+console.log(num6 ^ 5); // 7
+// 비트 not
+console.log(~num6); // -3
+// 비트 쉬프트 왼쪽 <<
+console.log(num6 << 1); // 4
+// 비트 쉬프트 오른쪽 >>
+console.log(num6 >> 1); // 1
+// 비트 쉬프트 부호 없는 오른쪽 >>>
+console.log(num6 >>> 1); // 1
 
 
+// 쉼표 연산자 
+// 쉼표의 마지막 값만 반환됩니다.
 
+let num7 = (1 + 2, 3 + 4); // 할당 연산자보다 우선순위가 낮기 때문에 () 괄호 안에 배치합니다.
 
+console.log(num7); // 7
 
+console.log((1 + 2, 3 + 4, 5 + 6, 7 + 8)); // 15
+
+// use strict 꺼야 작동
+let sum = 0
+
+for (a = 1, b = 3, c = a * b; a < 10; a++) {
+    sum += c;
+    console.log(`c = ${c} | sum = ${sum} \n`);
+}
+
+console.log("end");
 
 
 
