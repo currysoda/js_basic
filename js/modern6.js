@@ -1,3 +1,8 @@
+/* https://ko.javascript.info/ 
+ * 코어 자바스크립트
+ * 1.2.6 ~ 
+ */
+
 // "use strict";
 
 alert("Hello");
@@ -80,7 +85,7 @@ let num3 = 3;
 console.log(num2 - num3); // 2, - 의 이항 연산자는 뺄셈을 해줍니다.
 
 
-console.log("Java" + "script");
+console.log("Java" + "script"); // Javascript
 
 
 // 거듭제곱 연산자 **
@@ -165,11 +170,50 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
     console.log(`c = ${c} | sum = ${sum} \n`);
 }
 
+
+// 비교 연산자
+
+let num8 = 1;
+let num9 = 2;
+let num10 = 2;
+
+console.log(num8 > num9); // false
+console.log(num8 < num9); // true
+console.log(num9 == num10); // true
+console.log(num9 != num10); // false
+console.log(num8 != num10); // true
+
+let str3 = "apple";
+let str4 = "apple";
+let str5 = "banana";
+
+console.log(str3 == str4); // true
+console.log(str4 == str5); // false
+console.log(str4 > str5); // false
+console.log(str4 < str5); // true
+
+
+// 다른 형을 가진 값 간의 비교
+
+console.log('1' == 1); // true
+console.log('01' == 1); // true
+console.log('2' > 1); // true
+console.log(true == 0); // false
+
+// 0은 false 이지만 문자열 "0" 은 true 입니다.
+
+console.log(Boolean(0)); // false
+console.log(Boolean("0")); // true
+
+
+// 일치 연산자
+
+console.log(0 == false); // true
+console.log('' == false); // true
+
+console.log(0 === false);
+console.log('' === false);
+
+
+
 console.log("end");
-
-
-
-
-
-
-

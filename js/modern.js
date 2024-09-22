@@ -1,3 +1,7 @@
+/* https://ko.javascript.info/ 
+ * 코어 자바스크립트
+ * 1.1.1 ~ 1.2.5
+ */
 
 let message = 123456;
 
