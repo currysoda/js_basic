@@ -1,6 +1,6 @@
 /* https://ko.javascript.info/ 
  * 코어 자바스크립트
- * 1.2.6 ~ 
+ * 1.2.6 ~ 1.2.9
  */
 
 // "use strict";
@@ -211,8 +211,31 @@ console.log(Boolean("0")); // true
 console.log(0 == false); // true
 console.log('' == false); // true
 
-console.log(0 === false);
-console.log('' === false);
+console.log(0 === false); // false
+console.log('' === false); // false
+
+
+// null 과 undefined 비교하기
+
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+
+
+// null 과 0 비교하기
+
+console.log(null == 0); // false
+console.log(null >= 0); // true
+console.log(null > 0); // false
+
+
+// undefined 과 0 비교하기
+
+console.log(undefined == 0); // false
+console.log(undefined >= 0); // false
+console.log(undefined > 0); // false
+
+
+
 
 
 
