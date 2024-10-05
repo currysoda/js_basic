@@ -48,5 +48,11 @@ console.log(false || false); // false
 
 
 
+function fun1() {
+
+};
+
+
+
 
 console.log("end");
