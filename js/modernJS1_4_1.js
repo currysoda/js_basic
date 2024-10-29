@@ -1,3 +1,5 @@
+import { cloneDeep, merge } from "lodash-es";
+
 // "use strict"
 
 // JS - 1.4.1 객체
@@ -285,5 +287,21 @@ for(let key in Object3) {
 
 // lodash 를 이용한 예제
 
-const deepcopy = require("lodash");
+let Object4 = {
+    property_object1 : {
+        property_object1_property1 : "property_object1_property1",
+        property_object1_property2 : "property_object1_property2",
+    },
 
+    name : "Object4_name",
+    age: 30,
+};
+
+// lodash.cloneDeep() 함수 사용
+let Object5 = cloneDeep(Object4);
+
+console.log(Object5);
+
+console.log(Object5["property_object1"]);
+
+console.log(Object5["property_object1"]["property_object1_property1"]); // property_object1_property1
