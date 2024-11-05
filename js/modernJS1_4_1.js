@@ -1,4 +1,4 @@
-import { cloneDeep, merge } from "lodash-es";
+import _ from "lodash-es";
 
 // "use strict"
 
@@ -298,10 +298,19 @@ let Object4 = {
 };
 
 // lodash.cloneDeep() 함수 사용
-let Object5 = cloneDeep(Object4);
+let Object5 = _.cloneDeep(Object4);
 
 console.log(Object5);
 
 console.log(Object5["property_object1"]);
 
+console.log(Object4["property_object1"]["property_object1_property1"]); // property_object1_property1
+
 console.log(Object5["property_object1"]["property_object1_property1"]); // property_object1_property1
+
+Object5["property_object1"]["property_object1_property1"] = "new value";
+
+console.log(Object4["property_object1"]["property_object1_property1"]); // property_object1_property1
+
+console.log(Object5["property_object1"]["property_object1_property1"]); // new value
+
